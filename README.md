@@ -142,7 +142,7 @@ bool QNode::get_curr_robot_pose(geometry_msgs::PoseStamped& global_pose, tf2_ros
 > rosparam list
 > ```
 >
-> <center><img src="./images/页面功能介绍/地图页/打开地图/1-yaml_file_path.png" alt="yaml_file_path"/></center><br>此外，您还可以使用如下命令获取该参数的值：
+> <div align="center"><img src="./images/页面功能介绍/地图页/打开地图/1-yaml_file_path.png" alt="yaml_file_path"/></div><br>此外，您还可以使用如下命令获取该参数的值：
 > 
 > ```bash
 > rosparam get /yaml_file_path
@@ -163,10 +163,10 @@ bool QNode::get_curr_robot_pose(geometry_msgs::PoseStamped& global_pose, tf2_ros
 >
 > 在使用 <font color="#20b0ad">**保存点位**</font> 功能前，笔者推荐如果您已经使用本 Demo 程序[打开了一张地图](#31打开地图)。因为点位并不是凭空存储的，它需要与地图建立绑定关系。此外，笔者并不推荐您在本 Demo 程序外使用命令行启动 `map_server` 服务发布地图，因为那样 Demo 程序将无法分辨地图文件所在路径。
 
-位于 ***《点位和任务管理》停靠窗口*** 的“<font color="#20b0ad">**保存点位**</font>”按钮可以用于保存 <font color="#9b4726">**已发布的点位**</font> 或者是机器人的 <font color="#b9e7dd">**实时位置信息**</font>：<br><center><img src="./images/页面功能介绍/地图页/保存点位/1-保存点位按钮.PNG" alt="保存点位按钮"/></center>
+位于 ***《点位和任务管理》停靠窗口*** 的“<font color="#20b0ad">**保存点位**</font>”按钮可以用于保存 <font color="#9b4726">**已发布的点位**</font> 或者是机器人的 <font color="#b9e7dd">**实时位置信息**</font>：<br><div align="center"><img src="./images/页面功能介绍/地图页/保存点位/1-保存点位按钮.PNG" alt="保存点位按钮"/></div>
 
 * 无论是保存 已发布的点位 还是机器人的 实时位置信息，点位信息都会以 **Json** 文件格式存储。Json 文件的默认存储位置与地图文件（`*.pgm` 和 `*.yaml`）处于同一目录下；文件名称为 **地图文件名称 + "Point"**：<br>![文件位置](./images/页面功能介绍/地图页/保存点位/2-文件位置.PNG)
-* 保存点位需要自行拟定点位的名称：<br><center><img src="./images/页面功能介绍/地图页/保存点位/3-保存发布点位.PNG" alt="保存点位"/></center>
+* 保存点位需要自行拟定点位的名称：<br><div align="center"><img src="./images/页面功能介绍/地图页/保存点位/3-保存发布点位.PNG" alt="保存点位"/></div>
 
     > Demo 程序并不检查点位重名，也不检查重复保存；也就是说，您可以使用同一个名称多次保存同一个点位。
 
@@ -179,7 +179,7 @@ bool QNode::get_curr_robot_pose(geometry_msgs::PoseStamped& global_pose, tf2_ros
 
 ## 3.5、生成并保存任务
 
-我们可以使用 Demo 程序生成任务。点击 ***《点位和任务管理》停靠窗口*** 的“<font color="#66c23a">**生成任务**</font>”按钮以创建一条路径并保存为任务：<br><center>![生成任务](./images/页面功能介绍/地图页/生成任务/1-生成任务.PNG)</center>
+我们可以使用 Demo 程序生成任务。点击 ***《点位和任务管理》停靠窗口*** 的“<font color="#66c23a">**生成任务**</font>”按钮以创建一条路径并保存为任务：<br><div align="center">![生成任务](./images/页面功能介绍/地图页/生成任务/1-生成任务.PNG)</div>
 * 创建路径是通过“<font color="#9b4726">[**发布点位**](#32发布点位)</font>”工具完成的；
 * 第一个下拉框包含了五个数字（1、-1、30、-30、0），用于指定用户即将创建的新的一段路径的**行进方式**（前进/后退/左移/右移/停止）。这五个数字也是后续保存到任务文件中的数字；
 
